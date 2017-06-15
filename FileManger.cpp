@@ -102,8 +102,8 @@ long File::listFiles(std::vector<File> &files){
     return count;
 }
 bool File::contains(const File &f){
-    
-    return false;
+//    f.path.find(path)==0
+    return f.path.find(path)==0;
 }
 File::~File(){}
 mode_t File::getFileMode(){
@@ -118,9 +118,7 @@ mode_t File::getFileMode(){
 }
 
 
-bool File::readFile(const std::string &path,size_t len,int fd){
-    return false;
-}
+
 
 bool File::mkdir(const std::string &name){
     char buf[2048];
